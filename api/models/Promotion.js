@@ -15,6 +15,15 @@ module.exports = {
          type: 'integer',
          primaryKey: true,
          autoIncrement: true
+      },
+      category: {
+         type: 'string',
+         enum: ['Good', 'Better'],
+         defaultsTo: 'Good'
+    },
+      watchedCount:{
+         type: 'integer',
+         defaultsTo : 0
       }
   }
 };
