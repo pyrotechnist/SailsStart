@@ -1,13 +1,14 @@
 /**
- * User.js
+ * Student.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
+
   attributes: {
-      name:{
+     age:{
         type : 'string'
       },
       id:{
@@ -16,11 +17,9 @@ module.exports = {
          primaryKey: true,
          autoIncrement: true
       },
-      pets:
-      {
-         collection: 'Pet',
-         via: 'owner'
-      }
+      school: {
+      model: 'university'
+    }
 
   }
 };

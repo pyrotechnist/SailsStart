@@ -1,25 +1,26 @@
 /**
- * User.js
+ * University.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
+
   attributes: {
       name:{
         type : 'string'
       },
       id:{
-        type: 'integer',
+         type: 'integer',
          unique: true,
          primaryKey: true,
          autoIncrement: true
       },
-      pets:
+      students:
       {
-         collection: 'Pet',
-         via: 'owner'
+         collection: 'student',
+         via: 'school'
       }
 
   }
